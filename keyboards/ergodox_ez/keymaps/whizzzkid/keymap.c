@@ -1,5 +1,21 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include "keymap_german.h"
+#include "keymap_nordic.h"
+#include "keymap_french.h"
+#include "keymap_spanish.h"
+#include "keymap_hungarian.h"
+#include "keymap_swedish.h"
+#include "keymap_br_abnt2.h"
+#include "keymap_canadian_multilingual.h"
+#include "keymap_german_ch.h"
+#include "keymap_jp.h"
+#include "keymap_bepo.h"
+#include "keymap_italian.h"
+#include "keymap_slovenian.h"
+#include "keymap_danish.h"
+#include "keymap_norwegian.h"
+#include "keymap_portuguese.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -40,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(1,KC_INSERT),WEBUSB_PAIR,    KC_LCTRL,       KC_LALT,        KC_LGUI,                                                                                                        KC_UP,          KC_DOWN,        KC_LBRACKET,    KC_RBRACKET,    KC_EQUAL,
                                                                                                     TD(TD_COMMENT),      KC_DELETE,      KC_LEFT,       KC_RIGHT,
                                                                                                                     KC_HOME,        KC_PGUP,
-                                                                                    KC_SPACE,       LSFT_T(KC_ENTER),KC_END,         KC_PGDOWN,      RSFT_T(KC_ENTER),KC_SPACE
+                                                                                    KC_SPACE,       KC_ENTER,       KC_END,         KC_PGDOWN,      KC_ENTER,       KC_SPACE
   ),
   [1] = LAYOUT_ergodox_pretty(
     KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
