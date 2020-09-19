@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TG(2),                                          MO(2),          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
     MT(MOD_HYPR, KC_CAPSLOCK),KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           TG(3),                                                                          MO(3),          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_QUOTE,
     LSFT_T(KC_AUDIO_VOL_DOWN),KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       RSFT_T(KC_AUDIO_VOL_UP),
-    LT(2,KC_GRAVE), WEBUSB_PAIR,    LCTL_T(KC_MEDIA_PREV_TRACK),KC_LALT,        LGUI_T(KC_MEDIA_NEXT_TRACK),TD(TD_COMMENT),                                                                                                       KC_EQUAL,       KC_UP,          KC_DOWN,        KC_LBRACKET,    KC_RBRACKET,    LT(3,KC_EQUAL),
+    LT(2,KC_BRIGHTNESS_DOWN),WEBUSB_PAIR,    LCTL_T(KC_MEDIA_PREV_TRACK),KC_LALT,        LGUI_T(KC_MEDIA_NEXT_TRACK),TD(TD_COMMENT),                                                                                                       KC_EQUAL,       KC_UP,          KC_DOWN,        KC_LBRACKET,    KC_RBRACKET,    LT(3,KC_BRIGHTNESS_UP),
     KC_SPACE,       KC_ENTER,       LT(1,KC_WWW_HOME),                LT(1,KC_WWW_REFRESH),KC_ENTER,       KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
