@@ -16,6 +16,7 @@
 #include "keymap_danish.h"
 #include "keymap_norwegian.h"
 #include "keymap_portuguese.h"
+#include "ergodoxy.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -40,11 +41,6 @@ enum custom_keycodes {
   HSV_172_255_255,
 };
 
-/* Tap Dancery */
-enum
-{
-  TD_COMMENT
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -57,8 +53,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, RGB_HUI,        RGB_VAI,        RGB_SPI,        RGB_SAI,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_UP,          KC_TRANSPARENT, KC_F11,         KC_F12,         KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, RGB_HUD,        RGB_VAD,        RGB_SPD,        RGB_SAD,        KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, RGB_HUI,        RGB_VAI,        RGB_SPI,        RGB_SAI,        KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_UP,          KC_F11,         KC_F12,         KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, RGB_HUD,        RGB_VAD,        RGB_SPD,        RGB_SAD,        KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, TOGGLE_LAYER_COLOR,RGB_TOG,        RGB_MOD,        RGB_SLD,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, HSV_86_255_128, HSV_0_255_255,  HSV_172_255_255,KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
@@ -91,7 +87,7 @@ void keyboard_post_init_user(void) {
 const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
     [0] = { {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {0,0,255}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {85,203,158}, {85,203,158}, {85,203,158}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {154,255,255}, {154,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {154,255,255}, {154,255,255}, {249,228,255}, {35,255,255}, {35,255,255}, {154,255,255}, {134,255,213}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {134,255,213}, {249,228,255}, {35,255,255}, {35,255,255}, {35,255,255}, {85,203,158}, {85,203,158}, {85,203,158}, {154,255,255}, {154,255,255}, {154,255,255}, {154,255,255} },
 
-    [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {32,176,255}, {32,176,255}, {32,176,255}, {105,255,255}, {169,120,255}, {10,225,255}, {10,225,255}, {10,225,255}, {249,228,255}, {169,120,255}, {243,222,234}, {243,222,234}, {243,222,234}, {154,255,255}, {169,120,255}, {85,203,158}, {85,203,158}, {85,203,158}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {243,222,234}, {0,0,0}, {0,0,0}, {169,120,255}, {243,222,234}, {243,222,234}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {243,222,234}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+    [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {32,176,255}, {32,176,255}, {32,176,255}, {105,255,255}, {169,120,255}, {10,225,255}, {10,225,255}, {10,225,255}, {249,228,255}, {169,120,255}, {243,222,234}, {243,222,234}, {243,222,234}, {154,255,255}, {169,120,255}, {85,203,158}, {85,203,158}, {85,203,158}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {169,120,255}, {169,120,255}, {243,222,234}, {0,0,0}, {0,0,0}, {169,120,255}, {243,222,234}, {243,222,234}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {243,222,234}, {0,0,0}, {0,0,0}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [2] = { {141,255,233}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {0,205,155}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {31,255,255}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {31,255,255}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {31,255,255}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {0,0,0}, {0,0,0}, {0,0,0}, {31,255,255}, {31,255,255}, {31,255,255}, {31,255,255}, {141,255,233}, {141,255,233}, {0,0,0}, {0,0,0}, {0,0,0}, {141,255,233}, {0,205,155}, {0,205,155}, {0,205,155}, {0,205,155}, {141,255,233}, {180,255,233}, {180,255,233}, {180,255,233}, {180,255,233}, {141,255,233}, {180,255,233}, {180,255,233}, {180,255,233}, {0,0,0}, {141,255,233}, {180,255,233}, {180,255,233}, {180,255,233}, {0,0,0}, {141,255,233}, {0,0,0}, {0,0,0}, {0,205,155}, {0,0,0}, {0,0,0}, {0,0,0}, {31,255,255}, {31,255,255}, {0,0,0}, {31,255,255} },
 
@@ -167,45 +163,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-/*********************************************
- * Custom
- * ******************************************/
-
-/**
- * Emulates taps for a given number of times.
- */
-void emulate_tap(uint16_t keycode, int times) {
-    for (int i=0; i<times; i++) {
-        tap_code(keycode);
-    }
-}
-
-/**
- * Am I pressing the shift key?
- */
-bool is_shifted(void) {
-  return get_mods() & MOD_MASK_SHIFT;
-}
-
-/**
- * Adds comment sections in Markdown
- */
-void md_comment(qk_tap_dance_state_t *state, void *user_data)
-{
-  if(is_shifted()){
-    emulate_tap(KC_GRAVE, 1);
-  } else {
-    int times = 2;
-    if (state->count > 1) {
-      times = 6;
-    }
-    emulate_tap(KC_GRAVE, times);
-    emulate_tap(KC_LEFT, times/2);
-  }
-  reset_tap_dance(state);
-}
-
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_COMMENT] = ACTION_TAP_DANCE_FN(md_comment)
-};
