@@ -41,14 +41,13 @@ enum custom_keycodes {
   HSV_172_255_255,
 };
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           TG(1),                                          MO(1),          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TG(2),                                          MO(2),          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
     MT(MOD_HYPR, KC_CAPSLOCK),KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           TG(3),                                                                          MO(3),          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_QUOTE,
     LSFT_T(KC_AUDIO_VOL_DOWN),KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       RSFT_T(KC_AUDIO_VOL_UP),
-    LT(2,KC_BRIGHTNESS_DOWN),WEBUSB_PAIR,    LCTL_T(KC_MEDIA_PREV_TRACK),KC_LALT,        LGUI_T(KC_MEDIA_NEXT_TRACK),LT(1,KC_MEDIA_STOP),                                                                                                LT(1,KC_DELETE),KC_BSPACE,      KC_DELETE,      KC_LBRACKET,    KC_RBRACKET,    LT(3,KC_BRIGHTNESS_UP),
+    LT(2,KC_BRIGHTNESS_DOWN),WEBUSB_PAIR,    LCTL_T(KC_MEDIA_PREV_TRACK),KC_LALT,        LGUI_T(KC_MEDIA_NEXT_TRACK),LT(1,KC_MEDIA_STOP),                                                                                                LT(1,KC_MEDIA_PLAY_PAUSE),KC_BSPACE,      KC_DELETE,      KC_LBRACKET,    KC_RBRACKET,    LT(3,KC_BRIGHTNESS_UP),
     KC_SPACE,       KC_ENTER, TD(TD_COMMENT),                       KC_EQUAL,       KC_ENTER,       KC_SPACE
   ),
   [1] = LAYOUT_moonlander(
@@ -162,4 +161,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-

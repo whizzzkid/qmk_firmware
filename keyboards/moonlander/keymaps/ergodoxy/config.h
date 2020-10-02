@@ -3,5 +3,8 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#define FIRMWARE_VERSION u8"vK6xr/LqnWy"
+#undef TAPPING_TERM
+#define TAPPING_TERM 150
+
+#define FIRMWARE_VERSION u8"vK6xr/dn5G5"
 #define RGB_MATRIX_STARTUP_SPD 60
